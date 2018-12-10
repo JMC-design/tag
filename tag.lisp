@@ -22,12 +22,14 @@
   (plist->alist (symbol-plist sym)))
 
 ;;xlib:windows
+#+clx(progn
 (defmethod tag ((win xlib:window) tag)
   (setf (getf (xlib:window-plist win) (car tag)) (cdr tag)))
 (defmethod get-tag ((win xlib:window) tag)
   (getf (xlib:window-plist win) tag))
 (defmethod get-all-tags ((win xlib:window))
   (plist->alist (symbol-plist sym)))
+)
 
 ;; utility
 (defun plist->alist (lst)

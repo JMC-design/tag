@@ -28,7 +28,7 @@
 (defmethod get-tag ((win xlib:window) tag)
   (getf (xlib:window-plist win) tag))
 (defmethod get-all-tags ((win xlib:window))
-  (plist->alist (symbol-plist sym)))
+  (plist->alist (xlib:window-plist win)))
 )
 
 ;; utility

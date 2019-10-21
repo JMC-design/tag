@@ -1,11 +1,14 @@
 # tag
 generic tags
 
-(defgeneric tag          (object tag)
+(defgeneric add          (object tag)
 (:documentation "Adds '(:TAG . VALUE) to list of tags in OBJECT."))
 
-(defgeneric get-tag      (object tag) 
+(defgeneric get          (object tag) 
 (:documentation "Gets :TAG from OBJECT."))
 
-(defgeneric get-all-tags (object)
+(defgeneric get-all      (object)
 (:documentation "Returns all TAGS for given OBJECT as alist."))
+
+(defgeneric remove       (object tag)
+(:documentation "Removes tag from object"))
